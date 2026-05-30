@@ -278,7 +278,8 @@
         .feat-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(26px, 3.4vw, 44px); letter-spacing: -0.02em; line-height: 1.08; margin-bottom: 18px; }
         .feat-desc { font-size: 16px; color: var(--ink-soft); margin-bottom: 24px; max-width: 38ch; }
         .feat-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
-        .feat-meta span { font-size: 12.5px; color: var(--ink-soft); border: 1px solid var(--line-strong); padding: 6px 13px; border-radius: 999px; }
+        .feat-meta > span { font-size: 12.5px; color: var(--ink-soft); border: 1px solid var(--line-strong); padding: 6px 13px; border-radius: 999px; }
+        .feat-meta > span span { border: none; padding: 0; }
 
         /* carousel controls */
         .carousel-bar { display: flex; align-items: center; justify-content: space-between; margin-top: 28px; gap: 20px; }
@@ -472,7 +473,6 @@
                     <div class="sec-index reveal">01 — <span data-zh>关于</span><span data-en>About</span></div>
                     <h2 class="sec-title reveal d1"><span data-zh>关于我</span><span data-en>About Me</span></h2>
                 </div>
-                <p class="sec-note reveal d2"><span data-zh>从场景、行为和反馈出发，梳理更清晰的用户路径。</span><span data-en>Starting from scenarios, behaviors and feedback to map clearer user journeys.</span></p>
             </div>
 
             <p class="about-lead reveal">
@@ -776,7 +776,7 @@
             var idx = 0;
             var dotsWrap = document.getElementById('featDots');
             var timer = null;
-            var INTERVAL = 3000;
+            var INTERVAL = 2000;
 
             for (var i = 0; i < total; i++) {
                 var d = document.createElement('button');
